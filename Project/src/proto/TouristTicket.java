@@ -3,10 +3,25 @@ package proto;
 import java.util.Arrays;
 
 public class TouristTicket {
-    String hotelAddress;
-    String touristLocation[];
+    private String hotelAddress;
+    private String touristLocation[];
     public TouristTicket(String hotelAddress,String[] touristLocation){
         this.hotelAddress = hotelAddress;
+        this.touristLocation = touristLocation;
+    }
+
+    public String getHotelAddress(){
+        return hotelAddress;
+    }
+    public void setHotelAddress(String hotelAddress){
+        this.hotelAddress = hotelAddress;
+    }
+
+    public String[] getTouristLocation() {
+        return touristLocation;
+    }
+
+    public void setTouristLocation(String[] touristLocation){
         this.touristLocation = touristLocation;
     }
 
@@ -21,7 +36,7 @@ public class TouristTicket {
         if (position != -1) {
             touristLocation[position] = location;
         }
-       System.out.println(Arrays.toString(touristLocation));
+        System.out.println(Arrays.toString(touristLocation));
     }
 
 

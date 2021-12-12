@@ -1,9 +1,9 @@
 package proto;
 
 public class Address {
-    String street;
-    String city;
-    String state;
+    private String street;
+    private String city;
+    private String state;
 
 
     public void updateAddressDetails() {
@@ -12,6 +12,11 @@ public class Address {
     public String getAddress(){
 
         return  "street: "+street+ " city: "+city+" state: "+state;
+    }
+    public void setAddress(String street,String city,String state){
+        this.street = street;
+        this.city = city;
+        this.state = state;
     }
     public Address(String street,String city,String state){
         this.street = street;
