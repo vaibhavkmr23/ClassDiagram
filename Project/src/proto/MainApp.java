@@ -20,24 +20,9 @@ public class MainApp {
         flight.checkAvaibility();
         flight.updateSeatBooked();
 
-
-        //Print attributes and methods of class Tickets
-
-        Ticket ticket = new Ticket(23,6346,6750.99f,"Bangalore","Pune",flight,
-                new Passenger(2345,"kadma","jamshedpur","jharkhand","vaibhav","8324567789","vaibhavkumarjha46@gmail.com"),"10/12/2021","22:30","11/12/2021","4:00",false);
-        System.out.println("Pnr No: " +ticket.getPnrNo());
-        System.out.println("Departure Location: " +ticket.getDepartureLocation());
-        System.out.println("Destination Location: "+ticket.getDestinationLocation());
-        System.out.println("Departure Date: " +ticket.getDepartureDate());
-        System.out.println("Departure Time: " +ticket.getDepartureTime());
-        System.out.println("Arrival Date: "+ticket.getArrivalDate());
-        System.out.println("Arrival Time: "+ticket.getArrivalDate());
-        System.out.println("Seat No: "+ ticket.getSeatNo() );
-        System.out.println("Price: " + ticket.getPrice());
-       
         //Print attributes and methods of class TouristTicket
 
-        TouristTicket touristTicket = new TouristTicket("Hotel Maurya",new String[5]);
+        TouristTicket touristTicket = new TouristTicket("Hotel Maurya",new String[5],23,6346,6750.99f,"Bangalore","pune",flight,new Passenger(2345,"kadma","jamshedpur","jharkhand","vaibhav","8324567789","vaibhavkumarjha46@gmail.com"),"10/12/2021","22:30","11/12/2021","04:30",false);
         // Adding locations
         touristTicket.addTouristLocation("shimla");
         touristTicket.addTouristLocation("Manali");
@@ -49,7 +34,7 @@ public class MainApp {
         touristTicket.removeLocation("Bangalore");
 
         //Print attributes and methods of class RegularTicket
-        RegularTicket regularTicket = new RegularTicket(true,true,true);
+        RegularTicket regularTicket = new RegularTicket(23,6346,6750.99f,"Bangalore","Pune",flight,new Passenger(2345,"kadma","jamshedpur","jharkhand","vaibhav","8324567789","vaibhavkumarjha46@gmail.com"),"10/12/2021","22:30","11/12/2021","04:30",false,true,true,true);
         regularTicket.update();
         regularTicket.serviceAvailed();
 

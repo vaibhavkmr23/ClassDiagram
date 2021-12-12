@@ -1,11 +1,13 @@
 package proto;
 
-public class RegularTicket {
+public class RegularTicket extends Ticket {
     private boolean needFood;
     private boolean needWater;
     private boolean needSnacks;
 
-    public RegularTicket(boolean needFood,boolean needWater,boolean needSnacks){
+    public RegularTicket(int seatNo,int pnrNo,float price,String departureLocation,String destinationLocation,Flight flight,Passenger passenger,
+                         String depDate,String depTime,String arrivalDate,String arrivalTime,boolean isCancelled,boolean needFood,boolean needWater,boolean needSnacks){
+        super(seatNo,pnrNo,price,departureLocation,destinationLocation,flight,passenger,depDate,depTime,arrivalDate,arrivalTime,isCancelled);
         this.needSnacks = needSnacks;
         this.needWater = needWater;
         this.needFood = needFood;
@@ -58,3 +60,4 @@ public class RegularTicket {
         needSnacks = true;
     }
 }
+

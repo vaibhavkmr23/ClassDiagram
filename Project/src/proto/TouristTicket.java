@@ -2,10 +2,12 @@ package proto;
 
 import java.util.Arrays;
 
-public class TouristTicket {
+public class TouristTicket extends Ticket {
     private String hotelAddress;
     private String touristLocation[];
-    public TouristTicket(String hotelAddress,String[] touristLocation){
+    public TouristTicket(String hotelAddress,String[] touristLocation,int seatNo,int pnrNo,float price,String departureLocation,String destinationLocation,Flight flight,Passenger passenger,
+                         String depDate,String depTime,String arrivalDate,String arrivalTime,boolean isCancelled){
+        super(seatNo,pnrNo,price,departureLocation,destinationLocation,flight,passenger,depDate,depTime,arrivalDate,arrivalTime,isCancelled);
         this.hotelAddress = hotelAddress;
         this.touristLocation = touristLocation;
     }
