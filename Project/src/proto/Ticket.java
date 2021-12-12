@@ -1,6 +1,5 @@
 package proto;
-
-abstract class Ticket {
+ class Ticket {
     private Passenger passenger;
     private Flight flight;
     private int pnrNo;
